@@ -11,4 +11,14 @@ from app import app
 @app.route('/')
 @app.route('/index')
 def index():
-    return "Hello, World!"
+    user = {"username": "Gytis"}
+    return """
+<html>
+    <head>
+        <title> """ + user['username'] + """'s Home Page </title>
+    </head>
+    <body>
+        <h1>Hey, """+user['username']+"""</h1>
+    </body>
+</html>
+"""
