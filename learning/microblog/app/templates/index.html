@@ -1,0 +1,11 @@
+{# extends means index.html is embeded to base.html #}
+{% extends "base.html" %}
+{# content is unique name which indicates to Jinja what templates #}
+{# it needs to combine #}
+{% block content %}
+    <h1>Hey, {{name}}</h1>
+    {% for post in posts %}
+    <div><p>{{ post.author.username }}: <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+{% endblock %}
+

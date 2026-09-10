@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width">
+        {# Jinja brackets usage (Python templating engine): #}
+        {# {% %} - loops, conditions; #}
+        {# {{ }} - expressions. #}
+        {% if title %}
+            <title> {{title}} Home Page </title>
+        {% else %}
+            <title> Home Page </title>
+        {% endif %}
+    </head>
+    <body>
+        <div> <a href="/index">Home</a> <a href="/login">Login</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
