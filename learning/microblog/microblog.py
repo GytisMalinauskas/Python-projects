@@ -5,7 +5,7 @@
 # after setting env, run the app with:
 # ! flask run or python.exe microblog.py
 # you may now open http://127.0.0.1:5000
-from learning.microblog.app import app
+from app import app
 from livereload import Server
 
 def main():
